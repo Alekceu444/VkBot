@@ -17,7 +17,7 @@
 ### Запуск
 Необходим внешний http адрес для локальной машины. Для этого можно использовать [ngrok](https://ngrok.com/)
 
-- Запустить ngrok (https://dashboard.ngrok.com/get-started/setup) указав в команде "ngrok http" порт из параметра server.port
+- Запустить [ngrok] (https://dashboard.ngrok.com/get-started/setup) указав в команде "ngrok http" порт из параметра server.port
 - Скопировать адрес сервера из ngrok и вставить в адрес сервера [CallbackAPI](https://vk.com/dev/callback_api?f=1.%20%D0%9F%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20Callback%20API). Пример:
 ```
     http://24d093bada93.ngrok.io 
