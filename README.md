@@ -11,8 +11,6 @@
 	    Ключ доступа сообщества для бота. Необходим ключ с правом доступа к сообщениям сообщества и стене. [Как его получить](https://vk.com/dev/bizmessages_doc?f=1.1.%20%D0%9F%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%BB%D1%8E%D1%87%D0%B0%20%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0%20%D0%B2%20%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%D1%85%20%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B0) .
   - **api.version**
 	    Версия используемого Callback [API](https://vk.com/dev/versions) . 
-  - **api.link**
-	    Базовая ссылка для использования VKApi. (https://api.vk.com/method/)
   - **api.confirmation**
 	    Код для подтверждения адреса [сервера](https://vk.com/dev/callback_api?f=1.%20%D0%9F%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20Callback%20API) .
 
