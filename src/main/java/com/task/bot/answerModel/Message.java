@@ -1,27 +1,17 @@
 package com.task.bot.answerModel;
 
-import com.google.gson.JsonObject;
-import static com.task.bot.service.BotService.*;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
-public class Message {
+import static com.task.bot.service.BotService.typeKey;
 
-    private String text;
-    private String peerId;
-
-    public Message(JsonObject jsonRoot){
-
-        JsonObject childJsonObject = jsonRoot.getAsJsonObject(objectKey).getAsJsonObject(messageKey);
-
-        this.text = makeMessage(jsonRoot, childJsonObject);
-        this.peerId = childJsonObject.get(peerKey).getAsString();
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public String getPeerId() {
-        return peerId;
-    }
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = typeKey, visible = true)
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = ChatMessage.class, name = "message_new"),
+        @JsonSubTypes.Type(value = MediaComment.class, name = "wall_reply_new"),
+        @JsonSubTypes.Type(value = MediaComment.class, name = "wall_post_new"),
+        @JsonSubTypes.Type(value = ConfirmationMessage.class, name = "confirmation")
+})
+public interface Message {
 
 }
